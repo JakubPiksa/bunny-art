@@ -1,12 +1,34 @@
-$primary-color: #007bff;
+$background-primary: #e0d4bb;
+$background-secondary: #7f866d80;
+$text-light: rgb(235, 235, 235);
 
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: $background-primary;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-body {
-  justify-content: center;
-  background-color: rgb(46, 47, 46);
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: $background-secondary;
 }
