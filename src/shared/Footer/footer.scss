@@ -4,3 +4,30 @@
   border: 1px solid red;
   background-color: $background-primary;
 }
+
+.footer-logo img {
+  max-width: 280px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.contact a {
+  display: flex;
+  justify-content: flex-end;
+}
