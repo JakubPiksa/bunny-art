@@ -3,6 +3,12 @@ $background-secondary: #7f866d80;
 $text-light: rgb(235, 235, 235);
 $text-dark: #000000;
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -29,4 +35,9 @@ li {
 
 a {
   text-decoration: none;
+  color: $text-dark;
+}
+
+.app-container {
+  min-height: 100vh;
 }

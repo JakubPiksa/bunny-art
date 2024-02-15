@@ -1,33 +1,76 @@
 @import "../../global-styles.scss";
 
 .footer {
-  border: 1px solid red;
   background-color: $background-primary;
+  padding: 30px;
+  position: relative;
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+
+  @include flex-center;
 }
 
-.footer-logo img {
-  max-width: 280px;
+// Styl dla logo w footerze
+.footer-logo {
+  position: absolute;
+  max-width: 205px;
+  top: 100px;
+  left: 0;
+  border: 1px solid blueviolet;
+
+  @include flex-center;
+
+  img {
+    max-width: 205px;
+  }
 }
 
 .footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 }
 
 .socials {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  gap: 35px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 .contact {
-  display: flex;
-  justify-content: flex-end;
+  @include flex-center;
   flex-direction: column;
+  justify-content: flex-end;
+
+  gap: 35px;
 }
 
 .contact a {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 35px;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.line {
+  width: 1px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 23px;
 }

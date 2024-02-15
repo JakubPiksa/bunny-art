@@ -15,20 +15,23 @@ export const Footer: FC = () => {
             508 282 405 <img src="../../icons/phone.svg" alt="phone" />
           </a>
           <a href="https://maps.app.goo.gl/UxuRVt75BcmVcosy8">
-            ul. Osińska 64/4 44-240 Żory
-            <img src="../../icons/location.svg" alt="location" />
+            ul. Osińska 64/4 <br></br>44-240 Żory
+            <img src="../../icons/facebook.svg" alt="location" />
           </a>
         </div>
+        <span className="line"></span>
         <div className="socials">
           <a href="https://www.facebook.com/profile.php?id=100067095032900">
-            FB <img src="../../icons/facebook.svg" alt="fb"></img>
+            <img src="../../icons/facebook.svg" alt="fb"></img>
+            Bunny Art
           </a>
           <a href="https://www.instagram.com/_bunny_art_studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-            IG <img src="../../icons/instagram.svg" alt="ig"></img>
+            <img src="../../icons/instagram.svg" alt="ig"></img>
+            @_bunny_art_studio
           </a>
           <a href="mailto:bunny.art.mk@gmail.com">
-            bunny.art.mk@gmail.com{" "}
             <img src="../../icons/envelope.svg" alt="email" />
+            bunny.art.mk@gmail.com
           </a>
         </div>
       </div>

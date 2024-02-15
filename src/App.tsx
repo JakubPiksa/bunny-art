@@ -10,7 +10,7 @@ import { SiteNotFound } from "./shared/SiteNotFound/sitenotfound";
 function App() {
   return (
     <>
-      <div>
+      <div className="app-container">
         <Header />
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
