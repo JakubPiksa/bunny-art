@@ -1,6 +1,7 @@
 $background-primary: #e0d4bb;
 $background-secondary: #7f866d80;
 $text-light: rgb(235, 235, 235);
+$text-dark: #000000;
 
 button {
   border-radius: 8px;
@@ -28,7 +29,4 @@ li {
 
 a {
   text-decoration: none;
-}
-a:visited {
-  color: $background-secondary;
 }
