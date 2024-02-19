@@ -2,6 +2,7 @@ import { FC } from "react";
 import logoImage from "../../../assets/Znak_wodny_black.png";
 import "./footer.scss";
 import { NavLink } from "react-router-dom";
+import locationIcon from "../../../icons/location.svg";
 
 export const Footer: FC = () => {
   return (
@@ -16,7 +17,7 @@ export const Footer: FC = () => {
           </a>
           <a href="https://maps.app.goo.gl/UxuRVt75BcmVcosy8">
             ul. Osińska 64/4 <br></br>44-240 Żory
-            <img src="../../icons/facebook.svg" alt="location" />
+            <img src={locationIcon} alt="location" />
           </a>
         </div>
         <span className="line"></span>
