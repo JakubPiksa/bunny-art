@@ -1,5 +1,5 @@
 import { FC } from "react";
-import logoImage from "../../assets/Znak_wodny_black.png";
+import logoImage from "../../../assets/Znak_wodny_black.png";
 import "./footer.scss";
 import { NavLink } from "react-router-dom";
 

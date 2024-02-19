@@ -9,6 +9,11 @@ $text-dark: #000000;
   align-items: center;
 }
 
+// szerokość
+$mobile: 600px;
+$tablet: 900px;
+$desktop: 1200px;
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -40,4 +45,5 @@ a {
 
 .app-container {
   min-height: 100vh;
+  width: 100%;
 }
