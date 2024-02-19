@@ -16,11 +16,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    .logo img {
-      max-width: 125px;
+    .logo {
+      margin: 10px 0;
+      img {
+        max-width: 115px;
+      }
     }
-
     .nav {
       display: flex;
       gap: 20px;
@@ -40,6 +43,10 @@
           background-color 0.3s,
           border-radius 0.3s;
 
+        @media screen and (max-width: #{$tablet}) {
+          width: 50px;
+          padding: 0 5px;
+        }
         &:hover {
           color: $text-light;
           background-color: $background-secondary;

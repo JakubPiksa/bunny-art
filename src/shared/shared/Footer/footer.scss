@@ -27,6 +27,9 @@
 
   img {
     max-width: 205px;
+    @media screen and (max-width: #{$tablet}) {
+      display: none;
+    }
   }
 }
 
@@ -40,42 +43,76 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 35px;
+
+  @media screen and (max-width: #{$tablet}) {
+    gap: 15px;
+  }
 }
 
 .socials a {
   display: flex;
   align-items: center;
   gap: 35px;
+  font-size: 0.7rem;
 
+  @media screen and (max-width: #{$tablet}) {
+    gap: 15px;
+  }
   &:hover,
   &:focus {
     text-decoration: underline;
+  }
+
+  img {
+    @media screen and (max-width: #{$tablet}) {
+      width: 1.2rem;
+    }
   }
 }
 
 .contact {
   @include flex-center;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-end;
 
   gap: 35px;
+
+  @media screen and (max-width: #{$tablet}) {
+    gap: 15px;
+  }
 }
 
 .contact a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-size: 0.7rem;
   gap: 35px;
+
+  @media screen and (max-width: #{$tablet}) {
+    gap: 15px;
+  }
 
   &:hover,
   &:focus {
     text-decoration: underline;
   }
+
+  img {
+    @media screen and (max-width: #{$tablet}) {
+      width: 1.2rem;
+    }
+  }
 }
 
 .line {
   width: 1px;
-  height: 120px;
+  height: 190px;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 23px;
+
+  @media screen and (max-width: #{$tablet}) {
+    height: 125px;
+    margin: 0 15px;
+  }
 }
