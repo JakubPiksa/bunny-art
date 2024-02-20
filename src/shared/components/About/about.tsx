@@ -9,7 +9,7 @@ export const About: FC = () => {
   return (
     <div className="about-container">
       {/* description */}
-      <div className="about-container__description">
+      <div className="about-container__description" id="section-about">
         <strong> O Bunny Art</strong>
         <p>OPIS MARTY </p>
       </div>
@@ -44,7 +44,7 @@ export const About: FC = () => {
       </div>
       {/* peices&contact */}
       <div className="about-container__section">
-        <NavLink to={"/pricelist"}>Cennik</NavLink>
+        <NavLink to={"/pricelist"}> Cennik</NavLink>
         <span className="line"></span>
         <NavLink to={"/contact"}>Kontact</NavLink>
       </div>

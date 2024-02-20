@@ -19,6 +19,7 @@
 .home-content {
   @include flex-center;
   flex-direction: column;
+  gap: 20px;
   position: absolute;
   z-index: 2;
   opacity: 0;
@@ -28,6 +29,10 @@
   transition:
     bottom 2s ease-in-out,
     opacity 3s ease-in-out;
+
+  button {
+    font-size: 1.3rem;
+  }
 }
 
 .home.loaded .home-content {

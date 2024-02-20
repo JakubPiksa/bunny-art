@@ -3,7 +3,7 @@ $background-primary: #e0d4bb;
 $background-primary-light: #e0d4bb50;
 $background-secondary: #7f866d80;
 $background-secondary-light: #d9d9d9;
-$background-tertiary: #d6cba7;
+$background-tertiary: #ffd992;
 $text-light: rgb(235, 235, 235);
 $text-dark: #000000;
 
@@ -11,10 +11,40 @@ $text-dark: #000000;
 $mobile: 600px;
 $tablet: 900px;
 $desktop: 1200px;
+
+//czcionki
+$font-commiting: "./assets/fonts/Committing.otf";
+$font-cera-pro: "./assets/fonts/Cera-Pro-Black.otf";
+$font-blosvet: "./assets/fonts/Blosvet.woff";
+
+@font-face {
+  font-family: "Commiting";
+  src: url("#{$font-commiting}") format("opentype");
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("#{$font-cera-pro}") format("opentype");
+}
+
+@font-face {
+  font-family: "Blosvet";
+  src: url("#{$font-blosvet}") format("woff");
+}
+
+// Zmienne dla czcionek
+$font-primary: "Cera Pro", sans-serif;
+$font-secondary: "Blosvet", sans-serif;
+$font-artistic: "Commiting", sans-serif;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body {
+  font-family: $font-primary;
 }
 
 button {
@@ -25,16 +55,16 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: $background-primary;
-  color: white;
+  color: $text-dark;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition:
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in;
+  &:hover {
+    background-color: $background-tertiary;
+    box-shadow: 8px 7px 100px -35px rgba(66, 68, 90, 1);
+    border: 1px solid $background-secondary-light;
+  }
 }
 
 li {
