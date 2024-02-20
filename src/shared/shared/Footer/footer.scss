@@ -3,10 +3,8 @@
 .footer {
   background-color: $background-primary;
   padding: 30px;
-  position: relative;
-  margin-top: auto;
-  bottom: 0;
   width: 100%;
+  margin-top: auto;
 
   @include flex-center;
 

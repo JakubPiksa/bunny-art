@@ -19,10 +19,10 @@ export const Header: FC = () => {
         ) : (
           <nav className="nav">
             <NavLink to={"/home"}>O nas</NavLink>
-            <NavLink to={"/home"}>Galeria</NavLink>
-            <NavLink to={"/home"}>Usługi</NavLink>
-            <NavLink to={"/home"}>Cennik</NavLink>
-            <NavLink to={"/home"}>Kontakt</NavLink>
+            <NavLink to={"/gallery"}>Galeria</NavLink>
+            <NavLink to={"/services"}>Usługi</NavLink>
+            <NavLink to={"/pricelist"}>Cennik</NavLink>
+            <NavLink to={"/contact"}>Kontakt</NavLink>
           </nav>
         )}
       </div>

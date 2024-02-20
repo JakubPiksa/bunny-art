@@ -1,19 +1,21 @@
+//kolory
 $background-primary: #e0d4bb;
 $background-primary-light: #e0d4bb50;
 $background-secondary: #7f866d80;
+$background-secondary-light: #d9d9d9;
+$background-tertiary: #d6cba7;
 $text-light: rgb(235, 235, 235);
 $text-dark: #000000;
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 // szerokość
 $mobile: 600px;
 $tablet: 900px;
 $desktop: 1200px;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 button {
   border-radius: 8px;
@@ -42,9 +44,4 @@ li {
 a {
   text-decoration: none;
   color: $text-dark;
-}
-
-.app-container {
-  min-height: 100vh;
-  width: 100%;
 }
