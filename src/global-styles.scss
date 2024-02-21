@@ -1,8 +1,8 @@
 //kolory
 $background-primary: #e0d4bb;
 $background-primary-light: #e0d4bb50;
-$background-secondary: #7d866480;
-$background-secondary-light: #a3b993;
+$background-secondary: #79855c80;
+$background-secondary-light: #d9d9d9;
 $background-tertiary: #ffd992;
 $text-light: rgb(235, 235, 235);
 $text-dark: #000000;
@@ -13,13 +13,13 @@ $tablet: 900px;
 $desktop: 1200px;
 
 //czcionki
-$font-commiting: "./assets/fonts/Committing.otf";
+$font-committing: "./assets/fonts/Committing.otf";
 $font-cera-pro: "./assets/fonts/Cera-Pro-Black.otf";
 $font-blosvet: "./assets/fonts/Blosvet.woff";
 
 @font-face {
-  font-family: "Commiting";
-  src: url("#{$font-commiting}") format("opentype");
+  font-family: "Committing";
+  src: url("#{$font-committing}") format("opentype");
 }
 
 @font-face {
@@ -35,7 +35,7 @@ $font-blosvet: "./assets/fonts/Blosvet.woff";
 // Zmienne dla czcionek
 $font-primary: "Cera Pro", sans-serif;
 $font-secondary: "Blosvet", sans-serif;
-$font-artistic: "Commiting", sans-serif;
+$font-artistic: "Committing", sans-serif;
 
 @mixin flex-center {
   display: flex;

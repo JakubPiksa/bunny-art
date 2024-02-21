@@ -1,10 +1,10 @@
 @import "../../../global-styles.scss";
 
 .footer {
+  margin-top: auto;
   background-color: $background-primary;
   padding: 30px 0;
   width: 100%;
-  margin: auto;
   @include flex-center;
 
   @media screen and (max-width: #{$mobile}) {
@@ -15,7 +15,7 @@
 // Styl dla logo w footerze
 .footer-logo {
   position: absolute;
-  height: 100%;
+
   width: 100%;
   max-width: 205px;
   left: 5%;
