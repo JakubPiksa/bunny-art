@@ -30,17 +30,15 @@ export const About: FC = () => {
       </div>
       {/* services */}
       <div className="about-container__services">
-        <div className="about-container__banner">
-          <img
-            src={backgroundImage}
-            className="about-container__background"
-          ></img>
-          <p>Oferta</p>
-          <img src={goldLogo} className="about-container__logo"></img>
-          <button>
-            <NavLink to={"/services"}>Oferowane Usługi</NavLink>
-          </button>
-        </div>
+        <img
+          src={backgroundImage}
+          className="about-container__background"
+        ></img>
+        <p>Oferta</p>
+        <img src={goldLogo} className="about-container__logo"></img>
+        <button>
+          <NavLink to={"/services"}>Oferowane Usługi</NavLink>
+        </button>
       </div>
       {/* peices&contact */}
       <div className="about-container__section">
