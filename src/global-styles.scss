@@ -3,8 +3,9 @@ $background-primary: #e0d4bb;
 $background-primary-light: #e0d4bb50;
 $background-secondary: #79855c80;
 $background-secondary-light: #d9d9d9;
-$background-tertiary: #ffd992;
-$text-light: rgb(235, 235, 235);
+$background-tertiary: #f1f1d0;
+$accent-primary: #80856e;
+$text-light: #ffffff;
 $text-dark: #000000;
 
 // szerokość
@@ -60,8 +61,10 @@ button {
   transition:
     background-color 0.3s ease-in-out,
     box-shadow 0.3s ease-in;
+
   &:hover {
-    background-color: $background-tertiary;
+    background-color: $accent-primary;
+    color: $text-light;
     box-shadow: 8px 7px 100px -35px rgba(66, 68, 90, 1);
     border: 1px solid $background-secondary-light;
   }

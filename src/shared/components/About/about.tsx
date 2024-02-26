@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import "./about.scss";
 import { NavLink } from "react-router-dom";
 import heartIcon from "../../../icons/heart.svg";
@@ -15,6 +16,7 @@ export const About: FC = () => {
       </div>
       {/* gallery */}
       <div className="about-container__gallery">
+        <div></div>
         <strong> Galeria</strong>
         <button>
           <NavLink to={"/gallery"}>Galeria</NavLink>

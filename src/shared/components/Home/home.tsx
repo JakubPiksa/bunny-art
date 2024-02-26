@@ -14,9 +14,25 @@ export const Home: FC = () => {
   };
 
   useEffect(() => {
+    const handleMouseEnter = () => {
+      if (homeRef.current) {
+        homeRef.current.classList.add("loaded");
+      }
+    };
+
+    const addClassAfterDelay = () => {
+      setTimeout(() => {
+        if (homeRef.current && !homeRef.current.classList.contains("loaded")) {
+          homeRef.current.classList.add("loaded");
+        }
+      }, 1500);
+    };
+
     if (homeRef.current) {
-      homeRef.current.classList.add("loaded");
+      homeRef.current.addEventListener("mouseenter", handleMouseEnter);
     }
+
+    addClassAfterDelay();
   }, []);
 
   return (
