@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import "./about.scss";
-import { NavLink } from "react-router-dom";
+import {Link } from "react-router-dom";
 import heartIcon from "../../../icons/heart.svg";
 import backgroundImage from "../../../assets/Tlo.png";
 import goldLogo from "../../../assets/Znak_wodny_white.png";
@@ -15,12 +15,14 @@ export const About: FC = () => {
         <p>OPIS MARTY </p>
       </div>
       {/* gallery */}
+    
       <div className="about-container__gallery">
-        <div></div>
-        <strong> Galeria</strong>
-        <button>
-          <NavLink to={"/gallery"}>Galeria</NavLink>
-        </button>
+          <div></div>
+          <strong> Galeria</strong>
+          <button>
+            <Link to={"/gallery"}>Galeria</Link>
+          </button>
+      
       </div>
       {/* info */}
       <div className="about-container__information">
@@ -39,14 +41,14 @@ export const About: FC = () => {
         <p>Oferta</p>
         <img src={goldLogo} className="about-container__logo"></img>
         <button>
-          <NavLink to={"/services"}>Oferowane Usługi</NavLink>
+          <Link to={"/services"}>Oferowane Usługi</Link>
         </button>
       </div>
       {/* peices&contact */}
       <div className="about-container__section">
-        <NavLink to={"/pricelist"}> Cennik</NavLink>
+        <Link to={"/pricelist"} className="about-container__section-link"> Cennik</Link>
         <span className="line"></span>
-        <NavLink to={"/contact"}>Kontact</NavLink>
+        <Link to={"/contact"} className="about-container__section-link">Kontact</Link>
       </div>
     </div>
   );

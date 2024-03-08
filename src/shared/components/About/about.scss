@@ -1,4 +1,3 @@
-// about.scss
 
 @import "../../../global-styles.scss";
 
@@ -85,7 +84,7 @@
     width: 100%;
     background-color: $background-tertiary;
 
-    a {
+    &-link{
       font-size: 4rem;
       font-family: $font-artistic;
       transition: transform 0.2s ease-in-out;
