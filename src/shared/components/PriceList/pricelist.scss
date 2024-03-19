@@ -1,1 +1,53 @@
 @import "../../../global-styles.scss";
+
+.prices {
+  border: 1px solid red;
+
+  &-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+
+    &-element {
+      border: 1px solid blue;
+
+      &-title {
+        @include flex-center;
+        border: 1px salmon solid;
+        position: relative;
+        padding: 10px;
+
+        h2 {
+          position: relative; /* Ustawienie pozycji względem kontenera tytułu */
+          white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+          overflow: hidden; /* Ukrywa nadmiarowy tekst */
+
+          span {
+            position: absolute;
+            top: 50%;
+            width: 50%; /* Szerokość spana jako procent szerokości tytułu */
+            height: 3px;
+            background-color: black; /* Kolor spana */
+          }
+
+          span:first-child {
+            left: 0;
+          }
+
+          span:last-child {
+            right: 0;
+          }
+        }
+      }
+      &-name {
+        border: 1px solid purple;
+
+        @include flex-center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
