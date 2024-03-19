@@ -3,5 +3,9 @@ import { FC } from "react";
 import "./pricelist.scss";
 
 export const PriceList: FC = () => {
-  return <div>Price LIST</div>;
+  return (
+    <div>
+      <h1>Cennik</h1>
+    </div>
+  );
 };

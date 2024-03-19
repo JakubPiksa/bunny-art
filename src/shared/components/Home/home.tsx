@@ -25,7 +25,7 @@ export const Home: FC = () => {
         if (homeRef.current && !homeRef.current.classList.contains("loaded")) {
           homeRef.current.classList.add("loaded");
         }
-      }, 1500);
+      }, 1000);
     };
 
     if (homeRef.current) {
