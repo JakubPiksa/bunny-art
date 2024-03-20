@@ -1,50 +1,56 @@
 @import "../../../global-styles.scss";
 
 .prices {
-  border: 1px solid red;
+  width: 100%;
+
+  h1 {
+    font-family: $font-artistic;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 500;
+    color: $accent-primary;
+    margin: 0;
+    margin-top: 40px;
+  }
 
   &-container {
     display: grid;
 
+    padding: 50px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    column-gap: 30px;
-    row-gap: 20px;
+    column-gap: 100px;
+    row-gap: 100px;
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      row-gap: 50px;
+    }
 
     &-element {
-      border: 1px solid blue;
-
       &-title {
         @include flex-center;
-        border: 1px salmon solid;
-        position: relative;
-        padding: 10px;
 
         h2 {
-          position: relative; /* Ustawienie pozycji względem kontenera tytułu */
-          white-space: nowrap; /* Zapobiega zawijaniu tekstu */
-          overflow: hidden; /* Ukrywa nadmiarowy tekst */
+          margin: 0 20px;
+        }
+        span {
+          height: 3px;
+          width: 100%;
+          background-color: $accent-primary;
+        }
 
-          span {
-            position: absolute;
-            top: 50%;
-            width: 50%; /* Szerokość spana jako procent szerokości tytułu */
-            height: 3px;
-            background-color: black; /* Kolor spana */
-          }
+        span:first-child {
+          left: 0;
+        }
 
-          span:first-child {
-            left: 0;
-          }
-
-          span:last-child {
-            right: 0;
-          }
+        span:last-child {
+          right: 0;
         }
       }
-      &-name {
-        border: 1px solid purple;
 
+      &-name {
         @include flex-center;
         justify-content: space-between;
       }

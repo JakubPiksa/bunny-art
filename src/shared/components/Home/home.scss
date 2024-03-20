@@ -38,6 +38,10 @@
 .home.loaded .home-content {
   opacity: 1;
   bottom: 25%;
+
+  @include mobile {
+    bottom: 40%;
+  }
 }
 
 .home-logo {

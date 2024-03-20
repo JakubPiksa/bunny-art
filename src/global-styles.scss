@@ -3,7 +3,7 @@ $background-primary: #e0d4bb;
 $background-primary-light: #e0d4bb50;
 $background-secondary: #79855c80;
 $background-secondary-light: #d9d9d9;
-$background-tertiary: #f1f1d0;
+$background-tertiary: #aebd89;
 $accent-primary: #80856e;
 $text-light: #ffffff;
 $text-dark: #000000;
@@ -37,6 +37,29 @@ $font-blosvet: "../../assets/fonts/Blosvet.woff";
 $font-primary: "Cera Pro", sans-serif;
 $font-secondary: "Blosvet", sans-serif;
 $font-artistic: "Committing", sans-serif;
+
+//widths&mixins
+$mobile: 600px;
+$tablet: 900px;
+$desktop: 1200px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$mobile + 1}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$tablet + 1}) and (max-width: #{$desktop}) {
+    @content;
+  }
+}
 
 @mixin flex-center {
   display: flex;

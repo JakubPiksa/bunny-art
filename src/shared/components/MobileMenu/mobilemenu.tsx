@@ -28,11 +28,25 @@ export const MobileMenu: FC = () => {
             <img src={closeIcon} alt="close"></img>
           </button>
           <nav className="mobile-nav">
-            <NavLink to={"/home"}>O nas</NavLink>
-            <NavLink to={"/home"}>Galeria</NavLink>
-            <NavLink to={"/home"}>Usługi</NavLink>
-            <NavLink to={"/home"}>Cennik</NavLink>
-            <NavLink to={"/home"}>Kontakt</NavLink>
+            <NavLink to={"/home"} onClick={handleMenuClose}>
+              O nas
+            </NavLink>
+
+            <NavLink to={"/gallery"} onClick={handleMenuClose}>
+              Galeria
+            </NavLink>
+
+            <NavLink to={"/services"} onClick={handleMenuClose}>
+              Usługi
+            </NavLink>
+
+            <NavLink to={"/pricelist"} onClick={handleMenuClose}>
+              Cennik
+            </NavLink>
+
+            <NavLink to={"/contact"} onClick={handleMenuClose}>
+              Kontakt
+            </NavLink>
           </nav>
           <button className="close-button" onClick={handleMenuClose}>
             Close
