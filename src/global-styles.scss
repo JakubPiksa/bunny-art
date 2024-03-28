@@ -41,7 +41,7 @@ $font-artistic: "Committing", sans-serif;
 //widths&mixins
 $mobile: 600px;
 $tablet: 900px;
-$desktop: 1200px;
+$laptop: 1200px;
 
 @mixin mobile {
   @media screen and (max-width: #{$mobile}) {
@@ -55,7 +55,7 @@ $desktop: 1200px;
   }
 }
 
-@mixin desktop {
+@mixin laptop {
   @media screen and (min-width: #{$tablet + 1}) and (max-width: #{$desktop}) {
     @content;
   }

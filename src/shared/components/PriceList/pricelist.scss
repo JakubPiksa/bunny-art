@@ -5,39 +5,76 @@
 
   h1 {
     font-family: $font-artistic;
-    font-size: 5rem;
+    font-size: 6rem;
     text-align: center;
     font-weight: 500;
     color: $accent-primary;
     margin: 0;
     margin-top: 40px;
+
+    @include laptop {
+      font-size: 5rem;
+    }
+    @include tablet {
+      font-size: 4rem;
+    }
+    @include mobile {
+      font-size: 4rem;
+    }
   }
 
   &-container {
     display: grid;
-
-    padding: 50px;
+    margin: 50px 100px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     column-gap: 100px;
-    row-gap: 100px;
+    row-gap: 50px;
+
+    @include laptop {
+      column-gap: 50px;
+      margin: 50px;
+    }
+
+    @include tablet {
+      padding: 0;
+      margin: 50px;
+      row-gap: 20px;
+      column-gap: 50px;
+    }
 
     @include mobile {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(6, 1fr);
-      row-gap: 50px;
+      margin: 20px;
+      @include flex-column;
     }
 
     &-element {
+      width: 100%;
       &-title {
         @include flex-center;
+        flex-wrap: wrap;
 
         h2 {
+          font-size: 3rem;
           margin: 0 20px;
+          font-family: $font-secondary;
+          color: $accent-primary;
+
+          @include laptop {
+            font-size: 2.25rem;
+          }
+          @include tablet {
+            font-size: 2rem;
+          }
+
+          @include mobile {
+            font-size: 2rem;
+          }
         }
         span {
-          height: 3px;
+          height: 2px;
           width: 100%;
+          border-radius: 5px;
           background-color: $accent-primary;
         }
 
@@ -53,6 +90,41 @@
       &-name {
         @include flex-center;
         justify-content: space-between;
+        font-size: 1.25rem;
+
+        p {
+          margin: 10px 0;
+          font-weight: 300;
+          font-size: 1.5rem;
+
+          &:last-child {
+            text-align: end;
+            margin-left: 16px;
+          }
+
+          @include laptop {
+            font-size: 1.25rem;
+          }
+
+          @include tablet {
+            font-size: 1.125rem;
+          }
+
+          span {
+            display: block;
+            font-size: 1rem;
+            font-style: italic;
+            margin: 0;
+
+            @include laptop {
+              font-size: 0.875rem;
+            }
+
+            @include tablet {
+              font-size: 0.75rem;
+            }
+          }
+        }
       }
     }
   }

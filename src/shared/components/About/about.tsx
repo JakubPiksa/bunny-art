@@ -12,7 +12,13 @@ export const About: FC = () => {
       {/* description */}
       <div className="about-container__description" id="section-about">
         <strong> O Bunny Art</strong>
-        <p>OPIS MARTY </p>
+        <p>
+          Bunny Art jest profesjonalnym salonem kosmetycznym, który oferuje
+          szeroki zakres usług z zakresu makijażu, stylizacji rzęs, manicure,
+          opalania natryskowego oraz innych zabiegów pielęgnacyjnych. Nasze
+          usługi są świadczone przez doświadczonych specjalistów, którzy dbają o
+          każdy szczegół, aby zapewnić naszym klientom doskonałe rezultaty.
+        </p>
       </div>
       {/* gallery */}
 
