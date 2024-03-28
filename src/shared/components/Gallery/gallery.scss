@@ -1,0 +1,18 @@
+@import "../../../global-styles.scss";
+
+.gallery {
+  border: 1px solid red;
+  @include flex-column;
+
+  &-part {
+    @include flex-column;
+
+    overflow: hidden;
+
+    img {
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
