@@ -4,7 +4,7 @@ import "./contact.scss";
 
 export const Contact: FC = () => {
   return (
-    <div className="gallery">
+    <div className="contact">
       <h1>Skontaktuj się z nami</h1>
     </div>
   );
