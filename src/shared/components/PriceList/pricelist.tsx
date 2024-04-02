@@ -1,8 +1,12 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 import "./pricelist.scss";
 
 export const PriceList: FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="prices">
       <h1>Cennik</h1>

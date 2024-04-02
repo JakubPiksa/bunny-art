@@ -1,76 +1,83 @@
 @import "../../../global-styles.scss";
 
 .gallery-modal {
-    position: fixed;
-    background-color: #00000090;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 12000;
+  position: fixed;
+  background-color: #00000090;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 12000;
+  @include flex-center;
+  overflow-y: auto;
+
+  &-image-container {
     @include flex-center;
-    overflow-y: auto;
+    max-width: 80%;
+    height: 80%;
 
-    &-image-container {
-        @include flex-center;
+    @include mobile {
+      max-width: 70%;
+      height: 70%;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: $background-primary;
+    color: $text-dark;
+
+    @include mobile {
+      top: 90%;
+    }
+  }
+
+  &-pagination {
+    position: absolute;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      bottom: 200px;
     }
 
-    &-image {
-        width: 85%;
-        height: 80vh;
-        
+    button {
+      background-color: #ffffff75;
+      @include flex-center;
+      height: 36px;
+      width: 36px;
+      padding: 0;
+      border-radius: 50px;
+
+      &:hover {
+        background-color: #ffffff95;
+        scale: 1.01;
+      }
+
+      @include mobile {
+        height: 56px;
+        width: 56px;
+
+        img {
+          height: 46px;
+          width: 46px;
+        }
+      }
     }
 
-    &-close {
-        position: absolute;
-        top: 40px;
-        right: 40px;
-        background-color: $background-primary;
-        color: $text-dark;
-
-        @include mobile {
-            top: 90%;
-        }
+    &-pageNumber {
+      position: absolute;
+      color: $text-light;
+      bottom: 10px;
     }
-
-    &-pagination {
-        position: absolute;
-        width: 95%;
-        display: flex;
-        justify-content: space-between;
-
-        @include mobile {
-            bottom: 200px;
-        }
-
-        button {
-            background-color: #ffffff75;
-            @include flex-center;
-            height: 36px;
-            width: 36px;
-            padding: 0;
-            border-radius: 50px;
-
-            &:hover {
-                background-color: #ffffff95;
-                scale: 1.01;
-            }
-
-            @include mobile {
-                height: 56px;
-                width: 56px;
-
-                img {
-                    height: 46px;
-                    width: 46px;
-                }
-            }
-        }
-
-        &-pageNumber {
-            position: absolute;
-            color: $text-light;
-            bottom: 10px;
-        }
-    }
+  }
 }

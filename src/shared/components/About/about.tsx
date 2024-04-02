@@ -1,17 +1,30 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 import "./about.scss";
 import { Link } from "react-router-dom";
 import heartIcon from "../../../icons/heart.svg";
-// import backgroundImage from "../../../assets/Tlo.png";
-// import goldLogo from "../../../assets/Znak_wodny_white.png";
+import { photoImages } from "../../../assets/gallery/gallery";
 
 export const About: FC = () => {
+  const getRandomPhotos = () => {
+    const copyPhotoImages = [...photoImages];
+
+    copyPhotoImages.sort(() => Math.random() - 0.5);
+
+    return copyPhotoImages.slice(0, 21);
+  };
+
+  const randomPhotos = getRandomPhotos();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="about-container">
       {/* description */}
       <div className="about-container__description" id="section-about">
-        <strong> O Bunny Art</strong>
+        <h1> O Bunny Art</h1>
         <p>
           Bunny Art jest profesjonalnym salonem kosmetycznym, który oferuje
           szeroki zakres usług z zakresu makijażu, stylizacji rzęs, manicure,
@@ -23,11 +36,23 @@ export const About: FC = () => {
       {/* gallery */}
 
       <div className="about-container__gallery">
-        <div></div>
-        <strong> Galeria</strong>
-        <button>
-          <Link to={"/gallery"}>Galeria</Link>
-        </button>
+        <h2> Galeria</h2>
+        <div className="about-container__gallery-background">
+          {randomPhotos.map((photo, index) => (
+            <div className="about-container__gallery-background-container">
+              <img
+                key={index}
+                src={photo}
+                alt={`Gallery item ${index + 1}`}
+                className="about-container__gallery-background-image"
+              />
+            </div>
+          ))}
+        </div>
+
+        <Link to={"/gallery"}>
+          <button>Galeria </button>
+        </Link>
       </div>
       {/* info */}
       <div className="about-container__information">
@@ -37,18 +62,7 @@ export const About: FC = () => {
           pomogę i doradzę tak abyśmy osiągneli najpiękniejszy efekt
         </p>
       </div>
-      {/* services */}
-      <div className="about-container__services">
-        {/* <img
-          src={backgroundImage}
-          className="about-container__background"
-        ></img> */}
-        <p>Oferta</p>
-        {/* <img src={goldLogo} className="about-container__logo"></img> */}
-        <button>
-          <Link to={"/services"}>Oferowane Usługi</Link>
-        </button>
-      </div>
+
       {/* peices&contact */}
       <div className="about-container__section">
         <Link to={"/pricelist"} className="about-container__section-link">

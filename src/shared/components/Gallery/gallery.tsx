@@ -1,16 +1,14 @@
-import { FC, useState } from "react";
-
+import { FC, useEffect, useState } from "react";
 import "./gallery.scss";
 import GalleryModal from "./galleryModal";
-
 import { photoImages } from "../../../assets/gallery/gallery";
 
 export const Gallery: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImages, setSelectedImages] = useState<string[]>([]);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const openModal = (images: string[]) => {
-    setSelectedImages(images);
+  const openModal = (index: number) => {
+    setSelectedImageIndex(index);
     setIsModalOpen(true);
   };
 
@@ -18,23 +16,39 @@ export const Gallery: FC = () => {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="gallery">
-      <h2>Galeria</h2>
+      <h1>Galeria</h1>
 
       <div className="gallery-part">
         {photoImages.map((photo, index) => (
-          <img
+          <div
             key={index}
-            src={photo}
-            alt={`Nails ${index + 1}`}
-            className="gallery-part-image"
-          />
+            className="gallery-part-container"
+            onClick={() => openModal(index)}
+          >
+            <img
+              src={photo}
+              alt={`Nails ${index + 1}`}
+              className="gallery-part-image"
+            />
+          </div>
         ))}
       </div>
+
       {isModalOpen && (
-        <GalleryModal images={selectedImages} onClose={closeModal} />
+        <GalleryModal
+          images={photoImages}
+          initialIndex={selectedImageIndex}
+          onClose={closeModal}
+        />
       )}
     </div>
   );
 };
+
+export default Gallery;

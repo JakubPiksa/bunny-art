@@ -1,21 +1,21 @@
-
 import { FC, useState } from "react";
 import ArrowRight from "../../../icons/arrow-right.svg";
 import ArrowLeft from "../../../icons/arrow-left.svg";
 import "./galleryModal.scss";
 
-
 interface GalleryModalProps {
-  images: string[]; 
+  images: string[];
+  initialIndex: number;
   onClose: () => void;
 }
 
-
-const GalleryModal: FC<GalleryModalProps> = ({ images, onClose }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+const GalleryModal: FC<GalleryModalProps> = ({
+  images,
+  initialIndex,
+  onClose,
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const totalImages = images.length;
-  const totalPages = Math.ceil(totalImages);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -32,7 +32,6 @@ const GalleryModal: FC<GalleryModalProps> = ({ images, onClose }) => {
   return (
     <div className="gallery-modal">
       <div className="gallery-modal-image-container">
-       
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
@@ -40,7 +39,6 @@ const GalleryModal: FC<GalleryModalProps> = ({ images, onClose }) => {
         />
       </div>
       <div className="gallery-modal-pagination">
-    
         <button onClick={handlePrevious}>
           <img src={ArrowLeft} alt="arrow left" />
         </button>
@@ -49,10 +47,10 @@ const GalleryModal: FC<GalleryModalProps> = ({ images, onClose }) => {
         </button>
       </div>
       <span className="gallery-modal-pagination-pageNumber">
-        {`Image ${currentIndex + 1} of ${totalPages}`}{" "}
+        {`Zdjęcie ${currentIndex + 1} z ${totalImages}`}
       </span>
       <button onClick={onClose} className="gallery-modal-close">
-        Close
+        Zamknij
       </button>
     </div>
   );

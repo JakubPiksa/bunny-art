@@ -3,7 +3,7 @@ $background-primary: #e0d4bb;
 $background-primary-light: #e0d4bb50;
 $background-secondary: #79855c80;
 $background-secondary-light: #d9d9d9;
-$background-tertiary: #aebd89;
+$background-tertiary: #b1bba4;
 $accent-primary: #80856e;
 $text-light: #ffffff;
 $text-dark: #000000;
@@ -107,4 +107,8 @@ li {
 a {
   text-decoration: none;
   color: $text-dark;
+}
+
+h1 {
+  cursor: default;
 }
