@@ -22,7 +22,7 @@ export const Header: FC = () => {
             <NavLink to={"/gallery"}>Galeria</NavLink>
             {/* <NavLink to={"/services"}>Usługi</NavLink> */}
             <NavLink to={"/pricelist"}>Cennik</NavLink>
-            {/* <NavLink to={"/contact"}>Kontakt</NavLink> */}
+            <NavLink to={"/contact"}>Kontakt</NavLink>
           </nav>
         )}
       </div>

@@ -1,0 +1,86 @@
+@import "../../../global-styles.scss";
+
+.contactS {
+  margin-top: 20px;
+  min-height: 80dvh;
+
+  &-heading {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid blue;
+    @include flex-center;
+
+    &-title {
+      color: $text-light;
+
+      position: relative;
+      font-size: 4rem;
+      z-index: 20;
+    }
+
+    &-background {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    margin: 72px 0;
+    @include flex-center;
+
+    @include tablet {
+      @include flex-column;
+    }
+
+    @include mobile {
+      @include flex-column;
+    }
+
+    &-container {
+      padding: 0 20px;
+      position: relative;
+      height: 170px;
+
+      @include flex-column;
+      justify-content: space-between;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &:not(:nth-child(4n + 4)):after {
+        background-color: #868686;
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+
+        @include tablet {
+          width: 100%;
+          height: 2px;
+        }
+      }
+    }
+
+    &-label {
+      margin: 0;
+      margin-top: 30px;
+    }
+
+    &-detail {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-opening-hours {
+    border: 1px solid rgb(255, 0, 221);
+  }
+}
