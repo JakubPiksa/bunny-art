@@ -36,10 +36,6 @@ export const Footer: FC = () => {
             <img src="../../icons/instagram.svg" alt="ig"></img>
             @_bunny_art_studio
           </a>
-          <a href="mailto:bunny.art.mk@gmail.com" target="_blank">
-            <img src="../../icons/envelope.svg" alt="email" />
-            bunny.art.mk@gmail.com
-          </a>
         </div>
       </div>
     </div>

@@ -30,7 +30,8 @@
   @include flex-center;
 
   @include mobile {
-    padding: 20px;
+    width: 100%;
+    padding: 20px 0;
     @include flex-column;
   }
 }
@@ -41,8 +42,7 @@
   flex-direction: column;
   gap: 35px;
 
-  @media screen and (max-width: #{$mobile}) {
-    width: 167px;
+  @include mobile {
     gap: 20px;
   }
 }
@@ -52,9 +52,10 @@
   align-items: center;
   gap: 35px;
 
-  @media screen and (max-width: #{$mobile}) {
-    font-size: 0.7rem;
+  @include mobile {
+    font-size: 1.25rem;
     gap: 15px;
+    width: 200px;
   }
   &:hover,
   &:focus {
@@ -62,8 +63,8 @@
   }
 
   img {
-    @media screen and (max-width: #{$mobile}) {
-      width: 1.2rem;
+    @include mobile {
+      width: 24px;
     }
   }
 }
@@ -81,7 +82,6 @@
 
   @include mobile {
     align-items: center;
-    width: 167px;
   }
 }
 
@@ -91,14 +91,11 @@
   align-items: center;
   gap: 35px;
 
-  @media screen and (max-width: #{$mobile}) {
-    font-size: 0.7rem;
-    gap: 15px;
-  }
-
   @include mobile {
+    font-size: 1.25rem;
+    gap: 15px;
     flex-direction: row-reverse;
-    width: 100%;
+    width: 200px;
   }
 
   &:hover,
@@ -107,8 +104,8 @@
   }
 
   img {
-    @media screen and (max-width: #{$mobile}) {
-      width: 1.2rem;
+    @include mobile {
+      width: 24px;
     }
   }
 }
@@ -122,6 +119,6 @@
   @media screen and (max-width: #{$mobile}) {
     height: 3px;
     width: 100vw;
-    margin: 20px;
+    margin: 40px;
   }
 }

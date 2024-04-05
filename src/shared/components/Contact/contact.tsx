@@ -15,7 +15,11 @@ export const Contact: FC = () => {
         />
       </div>
       <div className="contactS-info">
-        <div className="contactS-info-container">
+        <a
+          href="tel:+48508282405"
+          target="_blank"
+          className="contactS-info-container"
+        >
           <p className="contactS-info-label">
             <img src="../../icons/phone.svg" alt="phone" />
           </p>
@@ -24,8 +28,12 @@ export const Contact: FC = () => {
               508 282 405
             </a>
           </h2>
-        </div>
-        <div className="contactS-info-container">
+        </a>
+        <a
+          href="mailto:bunny.art.mk@gmail.com"
+          target="_blank"
+          className="contactS-info-container"
+        >
           <p className="contactS-info-label">
             <img src="../../icons/envelope.svg" alt="email" />
           </p>
@@ -34,8 +42,12 @@ export const Contact: FC = () => {
               bunny.art.mk@gmail.com
             </a>{" "}
           </h2>
-        </div>
-        <div className="contactS-info-container">
+        </a>
+        <a
+          href="https://maps.app.goo.gl/J5H1geusP41Pv5kU8"
+          target="_blank"
+          className="contactS-info-container"
+        >
           <p className="contactS-info-label">
             <img src={locationIcon} alt="location" />
           </p>
@@ -44,15 +56,7 @@ export const Contact: FC = () => {
               ul. Osińska 64/4 <br></br>44-240 Żory
             </a>
           </h2>
-        </div>
-        <div className="contactS-info-container">
-          <p className="contactS-info-label">Godziny otwarcia:</p>
-          <ul className="contactS-opening-hours">
-            <li>Pn - Pt: 9:00 - 21:00</li>
-            <li>Sob: 9:00 - 20:00</li>
-            <li>Niedz: Nieczynne</li>
-          </ul>
-        </div>
+        </a>
       </div>
     </div>
   );
