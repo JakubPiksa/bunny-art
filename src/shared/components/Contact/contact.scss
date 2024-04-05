@@ -149,4 +149,14 @@
       transition: transform 0.15s ease;
     }
   }
+  &-map {
+    width: 100%;
+    margin-bottom: 60px;
+    @include flex-center;
+
+    iframe {
+      max-width: 1200px;
+      width: calc(100% - 120px);
+    }
+  }
 }
