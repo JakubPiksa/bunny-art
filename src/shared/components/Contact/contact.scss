@@ -1,7 +1,6 @@
 @import "../../../global-styles.scss";
 
 .contactS {
-  margin-top: 20px;
   min-height: 80dvh;
 
   &-heading {
@@ -42,6 +41,7 @@
     }
 
     @include mobile {
+      margin: 10px 0;
       @include flex-column;
     }
 

@@ -1,9 +1,13 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import "./contact.scss";
 import background from "../../../assets/Tlo.png";
 import locationIcon from "../../../icons/location.svg";
 
 export const Contact: FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="contactS">
       <div className="contactS-heading">
