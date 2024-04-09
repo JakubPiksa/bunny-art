@@ -7,13 +7,13 @@ $accent-primary: #80856e;
 $text-light: #ffffff;
 $text-dark: #000000;
 
-$mobile: 600px;
-$tablet: 900px;
-$desktop: 1200px;
+$font-committing: "./assets/fonts/Committing.otf";
+$font-cera-pro: "./assets/fonts/Cera-Pro-Black.otf";
+$font-blosvet: "./assets/fonts/Blosvet.woff";
 
-$font-committing: "../../assets/fonts/Committing.otf";
-$font-cera-pro: "../../assets/fonts/Cera-Pro-Black.otf";
-$font-blosvet: "../../assets/fonts/Blosvet.woff";
+$font-primary: "Cera Pro", sans-serif;
+$font-secondary: "Blosvet", sans-serif;
+$font-artistic: "Committing", sans-serif;
 
 @font-face {
   font-family: "Committing";
@@ -30,13 +30,9 @@ $font-blosvet: "../../assets/fonts/Blosvet.woff";
   src: url("#{$font-blosvet}") format("woff");
 }
 
-$font-primary: "Cera Pro", sans-serif;
-$font-secondary: "Blosvet", sans-serif;
-$font-artistic: "Committing", sans-serif;
-
 $mobile: 600px;
 $tablet: 900px;
-$laptop: 1200px;
+$desktop: 1200px;
 
 @mixin mobile {
   @media screen and (max-width: #{$mobile}) {
