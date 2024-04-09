@@ -9,7 +9,7 @@ import { PriceList } from "./shared/components/PriceList/pricelist";
 import { Contact } from "./shared/components/Contact/contact";
 import { Services } from "./shared/components/Services/services";
 
-import "./global-styles.scss";
+import "./global-styles2.scss";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/home" element={<HomeLayout />} />
+            <Route path="/" element={<HomeLayout />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/services" element={<Services />} />
             <Route path="/pricelist" element={<PriceList />} />
