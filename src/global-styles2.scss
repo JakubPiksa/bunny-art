@@ -9,11 +9,8 @@ $text-dark: #000000;
 
 $font-committing: "./assets/fonts/Committing.otf";
 $font-cera-pro: "./assets/fonts/Cera-Pro-Black.otf";
+$font-cera-pro-light: "./assets/fonts/Cera-Pro-Light.otf";
 $font-blosvet: "./assets/fonts/Blosvet.woff";
-
-$font-primary: "Cera Pro", sans-serif;
-$font-secondary: "Blosvet", sans-serif;
-$font-artistic: "Committing", sans-serif;
 
 @font-face {
   font-family: "Committing";
@@ -26,9 +23,19 @@ $font-artistic: "Committing", sans-serif;
 }
 
 @font-face {
+  font-family: "Cera Pro";
+  src: url("#{$font-cera-pro-light}") format("opentype");
+}
+
+@font-face {
   font-family: "Blosvet";
   src: url("#{$font-blosvet}") format("woff");
 }
+
+$font-primary: "Cera Pro", sans-serif;
+$font-primary-light: "Cera Pro", sans-serif;
+$font-secondary: "Blosvet", sans-serif;
+$font-artistic: "Committing", sans-serif;
 
 $mobile: 600px;
 $tablet: 900px;
@@ -51,6 +58,7 @@ $desktop: 1200px;
     @content;
   }
 }
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -65,7 +73,7 @@ $desktop: 1200px;
 }
 
 body {
-  font-family: $font-primary;
+  font-family: $font-primary-light;
 }
 
 button {
@@ -73,8 +81,8 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+
+  font-family: $font-primary;
   background-color: $background-primary;
   color: $text-dark;
   cursor: pointer;
