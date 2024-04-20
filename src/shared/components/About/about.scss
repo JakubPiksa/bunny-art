@@ -13,6 +13,9 @@
 
     max-width: 1440px;
 
+@include mobile {
+margin: 0 20px;
+}
     h1 {
       font-size: 3rem;
       font-family: $font-secondary;
