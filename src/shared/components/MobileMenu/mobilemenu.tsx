@@ -36,9 +36,7 @@ export const MobileMenu: FC = () => {
               Galeria
             </NavLink>
 
-            <NavLink to={"/services"} onClick={handleMenuClose}>
-              Usługi
-            </NavLink>
+            
 
             <NavLink to={"/pricelist"} onClick={handleMenuClose}>
               Cennik
