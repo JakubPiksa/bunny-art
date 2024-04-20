@@ -47,7 +47,7 @@ export const MobileMenu: FC = () => {
             </NavLink>
           </nav>
           <button className="close-button" onClick={handleMenuClose}>
-            Close
+            Zamknij
           </button>
         </div>
       ) : null}
