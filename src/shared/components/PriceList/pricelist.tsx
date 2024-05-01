@@ -42,6 +42,57 @@ export const PriceList: FC = () => {
             <p>Manicure standard męski</p> <p>50zł</p>
           </div>
         </div>
+
+        <div className="prices-container-element">
+          <div className="prices-container-element-title">
+            <span></span>
+            <h2>Opalanie natryskowe</h2>
+            <span></span>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Standard (całe ciało) </p> <p>150zł</p>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Standard (połowa ciała) </p> <p>100zł</p>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Premium (całe ciało + peeling) </p> <p>180zł</p>
+          </div>
+          <div className="prices-container-element-name">
+            <p>
+              Pro Dance{" "}
+              <span className="prices-container-element-name-description">
+                (usługa skierowana do tancerzy na zawody taneczne)
+              </span>
+            </p>{" "}
+            <p>200zł</p>
+          </div>
+        </div>
+
+        <div className="prices-container-element">
+          <div className="prices-container-element-title">
+            <span></span>
+            <h2>Stylizacja rzes </h2>
+            <span></span>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Założenie / Uzupełnienie do 3 tyg Metoda 1:1</p>
+            <p>150 zł / 100zł</p>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Ściągnięcie stylizacji</p> <p>60zł</p>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Maincure hybrydowt</p> <p>90zł</p>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Laminacja rzęs (koloryzacja+botoks)</p> <p>170zł</p>
+          </div>
+          <div className="prices-container-element-name">
+            <p>Koloryzacja rzęs </p> <p>20zł</p>
+          </div>
+        </div>
+
         <div className="prices-container-element">
           <div className="prices-container-element-title">
             <span></span>
@@ -94,54 +145,6 @@ export const PriceList: FC = () => {
         <div className="prices-container-element">
           <div className="prices-container-element-title">
             <span></span>
-            <h2>Stylizacja rzes </h2>
-            <span></span>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Założenie / Uzupełnienie do 3 tyg Metoda 1:1</p>
-            <p>150 zł / 100zł</p>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Ściągnięcie stylizacji</p> <p>60zł</p>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Maincure hybrydowt</p> <p>90zł</p>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Laminacja rzęs (koloryzacja+botoks)</p> <p>170zł</p>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Koloryzacja rzęs </p> <p>20zł</p>
-          </div>
-        </div>
-        <div className="prices-container-element">
-          <div className="prices-container-element-title">
-            <span></span>
-            <h2>Opalanie natryskowe</h2>
-            <span></span>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Standard (całe ciało) </p> <p>150zł</p>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Standard (połowa ciała) </p> <p>100zł</p>
-          </div>
-          <div className="prices-container-element-name">
-            <p>Premium (całe ciało + peeling) </p> <p>180zł</p>
-          </div>
-          <div className="prices-container-element-name">
-            <p>
-              Pro Dance{" "}
-              <span className="prices-container-element-name-description">
-                (usługa skierowana do tancerzy na zawody taneczne)
-              </span>
-            </p>{" "}
-            <p>200zł</p>
-          </div>
-        </div>
-        <div className="prices-container-element">
-          <div className="prices-container-element-title">
-            <span></span>
             <h2>Stylizacja brwi </h2>
             <span></span>
           </div>
@@ -161,6 +164,7 @@ export const PriceList: FC = () => {
             <p>Laminacja brwi z koloryzacją </p> <p>120zł</p>
           </div>
         </div>
+
         <div className="prices-container-element">
           <div className="prices-container-element-title">
             <span></span>
