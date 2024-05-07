@@ -7,7 +7,6 @@ import { HomeLayout } from "./shared/shared/HomeLayout/homeLayout";
 import { Gallery } from "./shared/components/Gallery/gallery";
 import { PriceList } from "./shared/components/PriceList/pricelist";
 import { Contact } from "./shared/components/Contact/contact";
-import { Services } from "./shared/components/Services/services";
 
 import "./global-styles2.scss";
 
@@ -21,7 +20,7 @@ function App() {
             <Route path="/home" element={<HomeLayout />} />
             <Route path="/" element={<HomeLayout />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/services" element={<Services />} />
+
             <Route path="/pricelist" element={<PriceList />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<SiteNotFound />} />
