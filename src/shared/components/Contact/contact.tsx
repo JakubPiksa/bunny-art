@@ -22,6 +22,7 @@ export const Contact: FC = () => {
           content="Cennik Bunny Art - Skontaktuj się z nami aby zapisać się na wizytę"
         />
         <meta name="og:title" content="Bunny Art - Skontaktuj się z nami! " />
+        <link rel="canonical" href="https://www.bunnyart.pl/contact" />
       </Helmet>
       <div className="contactS">
         <div className="contactS-heading">

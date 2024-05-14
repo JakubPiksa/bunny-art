@@ -34,6 +34,7 @@ export const Gallery: FC = () => {
           content="Galeria Bunny Art - poznaj nasze dzieła i poznaj nasze umiejętności "
         />
         <meta name="og:title" content="Bunny Art - galeria zdjęć " />
+        <link rel="canonical" href="https://www.bunnyart.pl/gallery" />
       </Helmet>
       <div className="gallery">
         <h1>Galeria</h1>

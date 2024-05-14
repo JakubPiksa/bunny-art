@@ -11,14 +11,14 @@ export const Header: FC = () => {
   return (
     <div className="header">
       <div className="header-content">
-        <NavLink to={"/home"} className="logo">
+        <NavLink to={"/"} className="logo">
           <img src={logoImage} alt="Logo" />
         </NavLink>
         {isMobile ? (
           <MobileMenu />
         ) : (
           <nav className="nav">
-            <NavLink to={"/home"}>O nas</NavLink>
+            <NavLink to={"/"}>O nas</NavLink>
             <NavLink to={"/gallery"}>Galeria</NavLink>
             {/* <NavLink to={"/services"}>Usługi</NavLink> */}
             <NavLink to={"/pricelist"}>Cennik</NavLink>

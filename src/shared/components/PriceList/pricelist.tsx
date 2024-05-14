@@ -21,6 +21,7 @@ export const PriceList: FC = () => {
           content="Cennik Bunny Art - poznaj ceny naszych usług"
         />
         <meta name="og:title" content="Bunny Art - Cennik naszych usług " />
+        <link rel="canonical" href="https://www.bunnyart.pl/pricelist" />
       </Helmet>
       <div className="prices">
         <h1>Cennik</h1>

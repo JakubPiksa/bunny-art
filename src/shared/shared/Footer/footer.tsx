@@ -7,7 +7,7 @@ import locationIcon from "../../../icons/location.svg";
 export const Footer: FC = () => {
   return (
     <div className="footer">
-      <NavLink to={"/home"} className="footer-logo">
+      <NavLink to={"/"} className="footer-logo">
         <img src={logoImage} alt="Logo" />
       </NavLink>
       <div className="footer-content">

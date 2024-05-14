@@ -28,7 +28,7 @@ export const MobileMenu: FC = () => {
             <img src={closeIcon} alt="close"></img>
           </button>
           <nav className="mobile-nav">
-            <NavLink to={"/home"} onClick={handleMenuClose}>
+            <NavLink to={"/"} onClick={handleMenuClose}>
               O nas
             </NavLink>
 

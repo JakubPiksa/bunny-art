@@ -9,7 +9,7 @@ export const SiteNotFound: FC = () => {
       <h3 className="error">
         Ta ścieżka nie istnieje.
       </h3>
-      <Link to={`/home`}>
+      <Link to={`/`}>
         <button>Strona główna</button>
       </Link>
     </div>
