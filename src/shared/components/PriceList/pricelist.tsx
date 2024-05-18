@@ -17,7 +17,7 @@ export const PriceList: FC = () => {
           content="Cennik Bunny Art - poznaj ceny naszych usług"
         />
         <meta
-          name="og:description"
+          name="og:description" 
           content="Cennik Bunny Art - poznaj ceny naszych usług"
         />
         <meta name="og:title" content="Bunny Art - Cennik naszych usług " />
@@ -97,9 +97,7 @@ export const PriceList: FC = () => {
             <div className="prices-container-element-name">
               <p>Ściągnięcie stylizacji</p> <p>60zł</p>
             </div>
-            <div className="prices-container-element-name">
-              <p>Maincure hybrydowt</p> <p>90zł</p>
-            </div>
+            
             <div className="prices-container-element-name">
               <p>Laminacja rzęs (koloryzacja+botoks)</p> <p>170zł</p>
             </div>
