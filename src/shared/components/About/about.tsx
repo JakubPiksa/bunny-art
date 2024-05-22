@@ -99,7 +99,7 @@ export const About: FC = () => {
         <img src={heartIcon} alt="heart-icon" />
         <p>
           Moja wiedza i doświadczenie pozostają do twojej dyspozycji. Zawszę
-          pomogę i doradzę tak abyśmy osiągneli najpiękniejszy efekt
+          pomogę <br /> i doradzę tak, abyśmy osiągnęli najpiękniejszy efekt
         </p>
       </div>
 
