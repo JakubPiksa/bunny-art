@@ -81,7 +81,7 @@ export const About: FC = () => {
           {randomPhotos.map((photo, index) => (
             <div className="about-container__gallery-background-container">
               <img
-                key={index}
+                key={`Gallery item ${index + 1}`}
                 src={photo}
                 alt={`Gallery item ${index + 1}`}
                 className="about-container__gallery-background-image"
