@@ -126,21 +126,21 @@ export const PriceList: FC = () => {
               <p>
                 Makijaż okolicznościowy{" "}
                 <span className="prices-container-element-name-description">
-                  (Kępki rzęs , rozświetlenie dekoltu, ewentualne ozdoby w
+                  (Kępki rzęs, rozświetlenie dekoltu, ewentualne ozdoby w
                   postaci kryształków, zestaw ratunkowy)
                 </span>
               </p>{" "}
               <p>250zł</p>
             </div>
             <div className="prices-container-element-name">
-              <p>Makijaż na sesje zdjęciową</p> <p>250zł</p>
+              <p>Makijaż na sesję zdjęciową</p> <p>250zł</p>
             </div>
             <div className="prices-container-element-name">
               <p>
-                Makijaz biznesowy{" "}
+                Makijaż biznesowy{" "}
                 <span className="prices-container-element-name-description">
-                  (Delikatny makijaz charakteryzujący się świeżością i
-                  naturalnoscia)
+                  (Delikatny makijaż charakteryzujący się świeżością i
+                  naturalnoscią)
                 </span>
               </p>{" "}
               <p>250zł</p>
@@ -185,14 +185,14 @@ export const PriceList: FC = () => {
               <span></span>
             </div>
             <div className="prices-container-element-name">
-              <p>Pani młoda (+ makijaż próbny) korekta pana młodego + 2 os</p>{" "}
+              <p>Pani młoda (+ makijaż próbny) korekta Pana młodego + 2os</p>{" "}
               <p>900zł</p>
             </div>
             <div className="prices-container-element-name">
               <p>Pani młoda (+ makijaż próbny) + 2os</p> <p>850zł</p>
             </div>
             <div className="prices-container-element-name">
-              <p>Pani młoda (+ makijaż próbny) + pan młody + 3 os</p>{" "}
+              <p>Pani młoda (+ makijaż próbny) + Pan młody + 3os</p>{" "}
               <p>1050zł</p>
             </div>
             <div className="prices-container-element-name">

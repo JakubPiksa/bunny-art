@@ -98,7 +98,7 @@ export const About: FC = () => {
       <div className="about-container__information">
         <img src={heartIcon} alt="heart-icon" />
         <p>
-          Moja wiedza i doświadczenie pozostają do twojej dyspozycji. Zawszę
+          Moja wiedza i doświadczenie pozostają do twojej dyspozycji. Zawsze
           pomogę <br /> i doradzę tak, abyśmy osiągnęli najpiękniejszy efekt
         </p>
       </div>
