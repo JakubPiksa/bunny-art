@@ -6,6 +6,15 @@
   padding: 30px 0;
   width: 100%;
   @include flex-center;
+
+  &__copyright {
+    font-size: 0.75rem;
+    padding:  0;
+    background-color: $background-primary;
+    @include flex-center;
+    border-top: 1px solid #aa9772;
+    width: 100%;
+  }
 }
 
 // Styl dla logo w footerze
@@ -108,6 +117,7 @@
       width: 24px;
     }
   }
+  
 }
 
 .line {
@@ -121,4 +131,6 @@
     width: 100vw;
     margin: 40px;
   }
+
+  
 }
