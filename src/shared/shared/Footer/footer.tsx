@@ -42,7 +42,6 @@ export const Footer: FC = () => {
       </div>
       <div className="footer__copyright">
       <p>&copy; 2024 Bunny Art. Strona wykonana przez 
-        
         {" "}
           <a href="https://www.oandksoftdev.pl" target="_blank">
             O&K softDev
