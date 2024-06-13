@@ -111,7 +111,7 @@ export const About: FC = () => {
         </Link>
         <span className="about-container_line"></span>
         <Link to={"/contact"} className="about-container__section-link">
-          Kontact
+          Kontakt
         </Link>
       </div>
     </div>
