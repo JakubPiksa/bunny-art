@@ -35,7 +35,7 @@ export const Contact: FC = () => {
         </div>
         <div className="contactS-info">
           <a
-            href="tel:+48508282405"
+            href="tel:+48516419999"
             target="_blank"
             className="contactS-info-container"
           >
@@ -43,8 +43,8 @@ export const Contact: FC = () => {
               <img src="../../icons/phone.svg" alt="phone" />
             </p>
             <h2 className="contactS-info-detail">
-              <a href="tel:+48508282405" target="_blank">
-                508 282 405
+              <a href="tel:+48516419999" target="_blank">
+                516 419 999
               </a>
             </h2>
           </a>

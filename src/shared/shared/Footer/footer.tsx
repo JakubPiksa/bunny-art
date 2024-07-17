@@ -13,8 +13,8 @@ export const Footer: FC = () => {
         </NavLink>
         <div className="footer-content">
           <div className="contact">
-            <a href="tel:+48508282405" target="_blank">
-              508 282 405 <img src="../../icons/phone.svg" alt="phone" />
+            <a href="tel:+48516419999" target="_blank">
+              516 419 999 <img src="../../icons/phone.svg" alt="phone" />
             </a>
             <a href="https://maps.app.goo.gl/J5H1geusP41Pv5kU8" target="_blank">
               ul. Osińska 64/4 <br></br>44-240 Żory
@@ -41,11 +41,12 @@ export const Footer: FC = () => {
         </div>
       </div>
       <div className="footer__copyright">
-      <p>&copy; 2024 Bunny Art. Strona wykonana przez 
-        {" "}
+        <p>
+          &copy; 2024 Bunny Art. Strona wykonana przez{" "}
           <a href="https://www.oandksoftdev.pl" target="_blank">
             O&K softDev
-          </a>.
+          </a>
+          .
         </p>
       </div>
     </>
