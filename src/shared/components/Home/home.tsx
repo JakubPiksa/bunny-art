@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./home.scss";
 import backgroundImage from "../../../assets/Tlo.png";
 import goldLogo from "../../../assets/Znak_wodny_color.png";
@@ -13,41 +14,44 @@ export const Home: FC = () => {
     }
   };
 
+  // Wejście treści po załadowaniu (klasa uruchamia animacje w CSS)
   useEffect(() => {
-    const handleMouseEnter = () => {
-      if (homeRef.current) {
-        homeRef.current.classList.add("loaded");
-      }
-    };
-
-    const addClassAfterDelay = () => {
-      setTimeout(() => {
-        if (homeRef.current && !homeRef.current.classList.contains("loaded")) {
-          homeRef.current.classList.add("loaded");
-        }
-      }, 300);
-    };
-
-    if (homeRef.current) {
-      homeRef.current.addEventListener("mouseenter", handleMouseEnter);
-    }
-
-    addClassAfterDelay();
+    const timer = setTimeout(
+      () => homeRef.current?.classList.add("loaded"),
+      150,
+    );
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="home" ref={homeRef}>
-      <img
-        src={backgroundImage}
-        className="home-background"
-        alt="background"
-      ></img>
+      <img src={backgroundImage} className="home-background" alt="" />
+      <div className="home-overlay" />
+
       <div className="home-content">
-        <img src={goldLogo} className="home-logo" alt="logo"></img>
-        <button className="home-button" onClick={handleScrollToAbout}>
-          O nas
-        </button>
+        <img src={goldLogo} className="home-logo" alt="Bunny Art" />
+        <p className="home-services">
+          Manicure <span>·</span> Makijaż <span>·</span> Rzęsy i brwi{" "}
+          <span>·</span> Opalanie natryskowe
+        </p>
+        <div className="home-buttons">
+          <Link to="/contact" className="home-button">
+            Umów wizytę
+          </Link>
+          <Link to="/pricelist" className="home-button home-button--ghost">
+            Zobacz cennik
+          </Link>
+        </div>
       </div>
+
+      <button
+        className="home-scroll"
+        onClick={handleScrollToAbout}
+        aria-label="Przewiń do sekcji O mnie"
+      >
+        <span>Poznaj mnie</span>
+        <i />
+      </button>
     </div>
   );
 };

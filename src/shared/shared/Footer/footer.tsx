@@ -2,7 +2,6 @@ import { FC } from "react";
 import logoImage from "../../../assets/Znak_wodny_black.png";
 import "./footer.scss";
 import { NavLink } from "react-router-dom";
-import locationIcon from "../../../icons/location.svg";
 
 export const Footer: FC = () => {
   return (
@@ -16,9 +15,9 @@ export const Footer: FC = () => {
             <a href="tel:+48516419999" target="_blank">
               516 419 999 <img src="../../icons/phone.svg" alt="phone" />
             </a>
-            <a href="https://maps.app.goo.gl/J5H1geusP41Pv5kU8" target="_blank">
-              ul. Osińska 64/4 <br></br>44-240 Żory
-              <img src={locationIcon} alt="location" />
+            <a href="mailto:bunny.art.mk@gmail.com" target="_blank">
+              bunny.art.mk@gmail.com{" "}
+              <img src="../../icons/envelope.svg" alt="email" />
             </a>
           </div>
           <span className="line"></span>

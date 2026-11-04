@@ -1,165 +1,245 @@
 @import "../../../global-styles2.scss";
 
+$line: rgba(128, 133, 110, 0.25);
+
 .contactS {
   min-height: 80dvh;
+  padding-bottom: 80px;
 
-  &-heading {
+  // Nagłówek ze zdjęciem i tytułem pisanym, jak na stronie cennika
+  &-hero {
     position: relative;
     overflow: hidden;
+    height: 380px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    @include flex-column;
 
-    @include flex-center;
-
-    &-title {
-padding-left: 20px;
-      color: $text-light;
-
-      position: relative;
-      font-size: 4rem;
-      z-index: 20;
-
-      @include mobile {
-        font-size: 2.5rem;
-      }
+    @include mobile {
+      height: 280px;
+      padding-bottom: 50px;
     }
 
     &-background {
-      top: 0;
-      left: 0;
       position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-  }
 
-  &-info {
-    overflow: hidden;
-    margin: 72px 0;
-    @include flex-center;
-
-    @include tablet {
-      @include flex-column;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(40, 44, 30, 0.15), rgba(40, 44, 30, 0.45));
     }
 
-    @include mobile {
-      margin: 10px 0;
-      @include flex-column;
-    }
-
-    &-container {
-      padding: 0 80px;
+    &-content {
       position: relative;
-      height: 200px;
-      @include flex-column;
-      justify-content: space-between;
+      z-index: 2;
+      text-align: center;
+      padding: 0 20px;
+      color: $text-light;
+    }
 
-      @include laptop {
-        padding: 0 60px;
-      }
-
-      @include tablet {
-        width: 100%;
-      }
+    &-title {
+      font-family: $font-artistic;
+      font-weight: 400;
+      font-size: 6.5rem;
+      line-height: 1;
+      margin: 0;
 
       @include mobile {
-        padding: 0;
-        width: 100%;
-        height: auto;
-        justify-content: center;
+        font-size: 4.2rem;
       }
+    }
 
-      &:hover {
-        background-color: #f0efef;
-        transition:
-          background-color 0.15s ease,
-          transform 0.15s ease;
+    &-lead {
+      margin: 18px 0 0;
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
 
-        .contactS-info-label img {
-          transform: scale(1.2);
-        }
-
-        .contactS-info-detail {
-          transform: scale(1.2);
-        }
-
-        &:first-child {
-          border-radius: 20px 0 0 20px;
-
-          @include tablet {
-            border-radius: 0;
-          }
-
-          @include mobile {
-            border-radius: 0;
-          }
-        }
-
-        &:last-child {
-          border-radius: 0 20px 20px 0;
-
-          @include tablet {
-            border-radius: 0;
-          }
-
-          @include mobile {
-            border-radius: 0;
-          }
-        }
+      @include mobile {
+        font-size: 1rem;
       }
+    }
+  }
 
-      &:not(:nth-child(3n + 3)):after {
-        background-color: #868686;
-        content: " ";
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        height: 100%;
+  // Karty kontaktu
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 340px));
+    justify-content: center;
+    gap: 28px;
+    margin: -60px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
 
-        @include tablet {
-          top: auto;
-          width: 50%;
-          height: 2px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: -40px;
+    }
+  }
 
-        @include mobile {
-          top: auto;
-          width: 100%;
-          height: 2px;
-        }
+  &-card {
+    background: #fff;
+    border: 1px solid $line;
+    border-radius: 22px;
+    padding: 36px 28px 30px;
+    @include flex-column;
+    gap: 6px;
+    text-align: center;
+    box-shadow: 0 18px 40px -28px rgba(66, 68, 50, 0.45);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: $accent-primary;
+      box-shadow: 0 24px 48px -26px rgba(66, 68, 50, 0.55);
+    }
+
+    &-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: $background-primary-light;
+      @include flex-center;
+      margin-bottom: 12px;
+
+      img {
+        width: 28px;
+        height: 28px;
       }
     }
 
     &-label {
-      margin: 0;
-      margin-top: 30px;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: $accent-primary;
+    }
 
-      img {
-        transform: scale(1);
-        transition: transform 0.15s ease;
+    &-value {
+      font-size: 1.3rem;
+      font-weight: 400;
+      word-break: break-word;
+    }
+
+    &-hint {
+      font-size: 0.85rem;
+      color: #8a8a83;
+    }
+  }
+
+  // Wizyta u klientki
+  &-visit {
+    max-width: 760px;
+    margin: 72px auto 0;
+    padding: 48px 40px;
+    border-radius: 28px;
+    background: $background-primary-light;
+    text-align: center;
+    @include flex-column;
+    gap: 18px;
+
+    @include mobile {
+      margin: 48px 16px 0;
+      padding: 36px 22px;
+    }
+
+    &-title,
+    &-lead {
+      margin: 0;
+    }
+
+    &-title {
+      font-family: $font-secondary;
+      font-weight: 400;
+      font-size: 2.6rem;
+      color: $accent-primary;
+
+      @include mobile {
+        font-size: 2rem;
       }
     }
 
-    &-detail {
-      font-size: 1.25rem;
-      margin-bottom: 30px;
-      transform: scale(1);
-      transition: transform 0.15s ease;
+    &-lead {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    &-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 8px;
     }
   }
-  &-map {
-    width: 100%;
-    margin-bottom: 60px;
-    margin-top: 60px;
-    @include flex-column;
 
-    iframe {
-      margin-top: 20px;
-      max-width: 1200px;
-      width: calc(100% - 120px);
+  &-steps {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 6px 0 4px;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 16px 8px 8px;
+      font-size: 0.95rem;
+    }
+
+    span {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: $accent-primary;
+      color: $text-light;
+      font-size: 0.85rem;
+      @include flex-center;
+    }
+  }
+
+  &-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: $accent-primary;
+    color: $text-light;
+    font-family: $font-primary;
+    letter-spacing: 0.03em;
+    border: 1px solid $accent-primary;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      background: #6d725d;
+    }
+
+    &--ghost {
+      background: transparent;
+      color: $accent-primary;
+
+      &:hover {
+        background: $accent-primary;
+        color: $text-light;
+      }
     }
   }
 }

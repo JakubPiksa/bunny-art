@@ -87,7 +87,7 @@ export const PriceList: FC = () => {
           <div className="prices-container-element">
             <div className="prices-container-element-title">
               <span></span>
-              <h2>Stylizacja rzes </h2>
+              <h2>Stylizacja rzęs</h2>
               <span></span>
             </div>
             <div className="prices-container-element-name">
@@ -181,7 +181,7 @@ export const PriceList: FC = () => {
           <div className="prices-container-element">
             <div className="prices-container-element-title">
               <span></span>
-              <h2>Pakiety Slubne</h2>
+              <h2>Pakiety ślubne</h2>
               <span></span>
             </div>
             <div className="prices-container-element-name">
